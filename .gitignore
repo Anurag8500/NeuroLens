@@ -1,0 +1,27 @@
+# Python virtual environment & bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Large datasets & processed arrays (raw zips and generated PNGs)
+data/raw/*.zip
+data/raw/figshare_mat/
+data/processed/images/
+data/processed/masks/
+data/features_cache.npz
+
+# Model weights & large binary checkpoints
+outputs/models/*.pt
+outputs/models/*.pth
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

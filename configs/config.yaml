@@ -1,0 +1,43 @@
+project:
+  name: "NeuroLens — Brain Tumour Classification Using Deep Learning and MRI Analysis"
+  version: "1.0.0"
+
+seed: 42
+
+paths:
+  raw_mat_dir: "data/raw/figshare_mat"
+  processed_images_dir: "data/processed/images"
+  processed_masks_dir: "data/processed/masks"
+  metadata_path: "data/metadata.csv"
+  splits_dir: "data/splits"
+  patient_split_path: "data/splits/patient_split.json"
+  leaky_split_path: "data/splits/leaky_split.json"
+  models_dir: "outputs/models"
+  figures_dir: "outputs/figures"
+  results_summary_path: "outputs/results_summary.csv"
+
+data:
+  image_size: 224
+  resize_canvas: 256
+  num_classes: 3
+  classes:
+    - "meningioma"
+    - "glioma"
+    - "pituitary"
+  intensity_clip_p1: 1.0
+  intensity_clip_p995: 99.5
+
+training:
+  batch_size: 32
+  num_workers: 2
+  epochs: 25
+  early_stopping_patience: 7
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  amp: true
+  label_smoothing: 0.0
+
+classical:
+  rf_n_estimators: 100
+  svm_c: 1.0
+  svm_kernel: "rbf"

@@ -1,0 +1,17 @@
+{
+  "name": "neurolens",
+  "version": "1.0.0",
+  "description": "NeuroLens — Brain Tumour Classification Using Deep Learning and MRI Analysis",
+  "scripts": {
+    "dev": ".\\.venv\\Scripts\\python.exe app.py",
+    "start": ".\\.venv\\Scripts\\python.exe app.py"
+  },
+  "keywords": [
+    "brain-tumor",
+    "deep-learning",
+    "grad-cam",
+    "mri-classification"
+  ],
+  "author": "NeuroLens Research Team",
+  "license": "MIT"
+}
